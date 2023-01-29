@@ -32,4 +32,4 @@ python -m virtualenv wechat
 pip install -r.\requirements.txt
 ```
 
-Now that we're done with the installation part, we're only left with importing the database to your local computer and starting up the website. To import the database, first open your XAMPP and startup Apache and MySQL. Open your phpmyadmin and import the [database](/wechat.sql). Now, that we have everything ready for our website the only thing left is to run the [main.py](/main.py) file in the IDE of your choice. Visit WeChat at your [localhost](http://127.0.0.1:5000/).
+Now that we're done with the installation part, we're only left with importing the database to your local computer and starting up the website. To import the database, first open your XAMPP and startup Apache and MySQL. Open your phpmyadmin and import the [database](/wechat.sql). Now, that we have everything ready for our website the only thing left is to run the [main.py](/main.py) file in the IDE of your choice. Visit WeChat on your [localhost](http://127.0.0.1:5000/).
