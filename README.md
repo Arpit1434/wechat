@@ -1,1 +1,1 @@
-![Logo](/static/favicon2.ico) # WeChat
+# ![Logo](/static/favicon2.ico) WeChat
