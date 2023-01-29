@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{url_for('static', filename='favicon2.ico')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>WeChat</title>
+
+    <script>
+        let text = "Hey there! Let me first begin by greeting myself, I'm Arpit Tiwari from 2CME, Christ University(Central Campus) and I present to you WeChat. \
+        Social Media Apps have evolved over the years advancing their techniques in user retention which has resulted in people getting addicted to these apps. \
+        Video Games use a stamina system to limit the players' playtime encouraging them to purchase virtual currencies to recover their stamina. WeChat embraces this stamina system and uses what I call 'Shards' which depletes the more the user uses the app and recovers when the user is offline. \
+        This way the user's screentime is effectively reduced to 30 minutes a day.";
+        let index = 0;
+        function typeText() {
+            let typingText = document.getElementById("text");
+            if (index < text.length) {
+                typingText.textContent += text[index];
+                index++;
+                setTimeout(typeText, 60);
+            }
+        }
+
+        function updateShards(shards) {
+            document.getElementById("shards").innerHTML = "Shards: " + shards;
+            if (shards < 48) {
+                window.location.href = '/logout/{{ id }}';
+            }
+        }
+
+        function fetchShards() {
+            fetch("/user/{{ id }}/shards")
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    updateShards(data.shards);
+                });
+        }
+
+        window.addEventListener("load", function () {
+            fetchShards();
+            typeText();
+        });
+
+        setInterval(fetchShards, 1000);
+    </script>
+</head>
+
+<body>
+    <div class="body">
+        <h2 id="shards"></h2>
+        <span class="prototype" id="text">
+        </span>
+        <a href="/logout/{{ id }}" class="btn">
+            <button id="btn">Logout</button>
+        </a>
+    </div>
+</body>
+
+</html>

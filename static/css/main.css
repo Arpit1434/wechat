@@ -1,0 +1,127 @@
+:root {
+    --black: #222831;
+    --grey: #393E46;
+    --teal: #00ADB5;
+    --white: #EEEEEE;
+}
+
+body {
+    margin: 0;
+    background-color: var(--black);
+    overflow: hidden;
+}
+
+.body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Welcome-text {
+    color: var(--teal);
+}
+
+.sr-only {
+    color: var(--white);
+    padding: 5px;
+}
+
+.form-control {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--grey);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.btn {
+    padding: 20px;
+}
+
+#btn {
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--teal);
+    color: var(--white);
+    border: none;
+    border-radius: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.flash {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--white);
+    list-style-type: none;
+}
+
+#shards {
+    color: var(--teal);
+}
+
+.prototype {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--grey);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: clamp(80px, 80%, 600px);
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+#text {
+    overflow: hidden;
+}
+
+#text::after {
+    content: "|";
+    animation: blink-caret 0.5s step-end infinite;
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--black);
+    }
+}

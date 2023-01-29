@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{url_for('static', filename='favicon1.ico')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>WeChat</title>
+    <script>
+        function shakeForm() {
+            var loginForm = document.getElementById("login-form");
+            loginForm.classList.add("shake");
+            setTimeout(function () { loginForm.classList.remove("shake"); }, 1000);
+        }
+    </script>
+
+</head>
+
+<body>
+    <form class="body" id="login-form" action="/" method="post">
+        {% if shake %}
+        <script>shakeForm()</script>
+        {% endif %}
+        <h1 class="Welcome-text">Welcome to WeChat</h1>
+        <label for="uEmail" class="sr-only">Email address</label>
+        <input type="email" name="uEmail" id="inputEmail" class="form-control" placeholder="example@gmail.com" required
+            autofocus>
+        <label for="uPassword" class="sr-only">Password</label>
+        <input type="password" name="uPassword" id="inputPassword" class="form-control" placeholder="password123"
+            required>
+        <div class="btn">
+            <button id="btn" type="submit">Enter</button>
+        </div>
+        {% with errors = get_flashed_messages(category_filter=["error"]) %}
+        {% if errors %}
+        <div class="flash">
+            {%- for msg in errors %}
+            {{ msg }}
+            {% endfor -%}
+        </div>
+        {% endif %}
+        {% endwith %}
+    </form>
+</body>
+
+</html>
