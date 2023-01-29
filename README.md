@@ -13,6 +13,17 @@ What is a Shard? As discussed in previous section, we try to embrace a stamina s
 - Spending a day in the real world would buy you 30 minutes on WeChat.
 - 30 minutes on WeChat costs you 1440 Shards.
 
-## Getting started with Installations
+## Getting started with Installations and Starting up WeChat
 
-The backend of this web application is served by [flask](https://www.python.org/downloads/), it's frontend is handled by js and for databases, I've used [XAMPP](https://www.apachefriends.org/) and [phpmyadmin](http://localhost/phpmyadmin/). You can get started by installing the above requirements. As for additional requirements, clone the [requirements.txt](/requirement.txt), [main.py](/main.py), [static](/static) and [templates](/templates) from my repo.
+The backend of this web application is served by [flask](https://www.python.org/downloads/), it's frontend is handled by js and for databases, I've used [XAMPP](https://www.apachefriends.org/) and [phpmyadmin](http://localhost/phpmyadmin/). You can get started by installing the above requirements.
+
+- Startup your terminal.
+- Install the virtualenv module to create virtual environment for our web app.
+`pip install virtualenv`
+- Create a virtual environment in the terminal.
+`python -m virtualenv wechat`
+- Clone the  following requirements [requirements.txt](/requirement.txt), [main.py](/main.py), [static](/static), [templates](/templates) and [database](/wechat.sql) from my repo.
+- Install additional requirements from the terminal.
+`pip install -r.\requirements.txt`
+
+Now that we're done with the installation part, we're only left with importing the database to your local computer and starting up the website. To import the database, first open your XAMPP and startup Apache and MySQL. Open your phpmyadmin and import the [database](/wechat.sql). Now, that we have everything ready for our website the only thing left is to run the [main.py](/main.py) file in the IDE of your choice. Visit WeChat at your [localhost](http://127.0.0.1:5000/).
