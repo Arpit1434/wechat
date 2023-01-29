@@ -1,4 +1,4 @@
-# :left_speech_balloon: WeChat
+# 🗨️ WeChat
 
 ## A Proof of Concept for a Hackathon Fabricate23 conducted by [Christ University](https://christuniversity.in/)
 
