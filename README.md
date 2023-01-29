@@ -19,11 +19,11 @@ The backend of this web application is served by [flask](https://www.python.org/
 
 - Startup your terminal.
 - Install the virtualenv module to create virtual environment for our web app.
-`pip install virtualenv`
+```pip install virtualenv```
 - Create a virtual environment in the terminal.
-`python -m virtualenv wechat`
+```python -m virtualenv wechat```
 - Clone the  following requirements [requirements.txt](/requirement.txt), [main.py](/main.py), [static](/static), [templates](/templates) and [database](/wechat.sql) from my repo.
 - Install additional requirements from the terminal.
-`pip install -r.\requirements.txt`
+```pip install -r.\requirements.txt```
 
 Now that we're done with the installation part, we're only left with importing the database to your local computer and starting up the website. To import the database, first open your XAMPP and startup Apache and MySQL. Open your phpmyadmin and import the [database](/wechat.sql). Now, that we have everything ready for our website the only thing left is to run the [main.py](/main.py) file in the IDE of your choice. Visit WeChat at your [localhost](http://127.0.0.1:5000/).
