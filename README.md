@@ -12,3 +12,7 @@ What is a Shard? As discussed in previous section, we try to embrace a stamina s
 - It costs 48 Shards to spend a minute on WeChat.
 - Spending a day in the real world would buy you 30 minutes on WeChat.
 - 30 minutes on WeChat costs you 1440 Shards.
+
+## Getting started with Installations
+
+The backend of this web application is served by [flask](https://www.python.org/downloads/), it's frontend is handled by js and for databases, I've used [XAMPP](https://www.apachefriends.org/) and [phpmyadmin](http://localhost/phpmyadmin/). You can get started by installing the above requirements. As for additional requirements, clone the [requirements.txt](/requirement.txt), [main.py](/main.py), [static](/static) and [templates](/templates) from my repo.
