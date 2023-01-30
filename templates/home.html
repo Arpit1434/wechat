@@ -14,7 +14,7 @@
         Social Media Apps have evolved over the years advancing their techniques in user retention which has resulted in people getting addicted to these apps. \
         Video Games use a stamina system to limit the players' playtime encouraging them to purchase virtual currencies to recover their stamina. WeChat embraces this stamina system and uses what I call 'Shards' which depletes the more the user uses the app and recovers when the user is offline. \
         This way the user's screentime is effectively reduced to 30 minutes a day. \
-        This is just a proof of concept developed over two days for a Hackathon conducted at my university Fabricate23.";
+        This is just a proof of concept developed over two days for a Hackathon Fabricate23, conducted by My University.";
         let index = 0;
         function typeText() {
             let typingText = document.getElementById("text");
@@ -26,7 +26,8 @@
         }
 
         function updateShards(shards) {
-            document.getElementById("shards").innerHTML = "Shards: " + shards;
+            document.getElementById("shards").innerHTML = "&#128160;" + shards + " Shards";
+            shake();
             if (shards < 48) {
                 window.location.href = '/logout/{{ id }}';
             }
@@ -42,12 +43,18 @@
                 });
         }
 
+        function shake() {
+            var shards = document.getElementById("shards");
+            shards.classList.add("shake");
+            setTimeout(function () { shards.classList.remove("shake"); }, 1000);
+        }
+
         window.addEventListener("load", function () {
             fetchShards();
             typeText();
         });
 
-        setInterval(fetchShards, 1000);
+        setInterval(fetchShards, 60000);
     </script>
 </head>
 
