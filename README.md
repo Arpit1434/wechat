@@ -27,11 +27,11 @@ pip install virtualenv
 python -m virtualenv wechat
 ```
 - Clone the  following requirements from my repo.
-       - [requirements.txt](/requirement.txt)
-       - [main.py](/main.py)
-       - [static](/static)
-       - [templates](/templates)
-       - [database](/wechat.sql)
+  - [requirements.txt](/requirement.txt)
+  - [main.py](/main.py)
+  - [static](/static)
+  - [templates](/templates)
+  - [database](/wechat.sql)
 - Install additional requirements from the terminal.
 ```
 pip install -r.\requirements.txt
